@@ -99,5 +99,6 @@ public class Main {
         conn.setRequestMethod("POST");
         conn.setDoOutput(true);
         conn.setRequestProperty("Authorization", "Basic " + encoding); // Noncompliant
+        conn.setRequestProperty("Authorization", "Basic " + encoding); // Noncompliant
     }
 }
