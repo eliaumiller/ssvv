@@ -61,6 +61,7 @@ public class Main {
                     "user=" + uname + "&password=" + password); // Sensitive
 
             java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
+            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
         } catch (SQLException e) {
             e.printStackTrace();
         }
