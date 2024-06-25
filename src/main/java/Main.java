@@ -141,5 +141,23 @@ public class Main {
         conn.setRequestMethod("POST");
         conn.setDoOutput(true);
         conn.setRequestProperty("Authorization", "Basic " + encoding); // Noncompliant
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+
+		String query = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
+		      try (Connection conn = DriverManager.getConnection(url, username, password);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+
+            while (rs.next()) {
+                // Process each row of the result set
+                // Example: print the first column
+                System.out.println(rs.getString(1));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
