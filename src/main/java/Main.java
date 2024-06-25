@@ -108,4 +108,12 @@ public class Main {
         conn.setDoOutput(true);
         conn.setRequestProperty("Authorization", "Basic " + encoding); // Noncompliant
     }
+  public void anotherVulnerability5() throws IOException {
+        String encoding = Base64.getEncoder().encodeToString(("login:passwd").getBytes("UTF-8"));
+        URL url = new URL("www.center.com");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setDoOutput(true);
+        conn.setRequestProperty("Authorization", "Basic " + encoding); // Noncompliant
+    }
 }
