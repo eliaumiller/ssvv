@@ -159,6 +159,22 @@ public void pleaseAddVulnerability88() {
             e.printStackTrace();
         }
     }
+public void pleaseAddVulnerability99() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                    "user=steve&password=blue"); // Sensitive
+            String uname9 = "steve";
+            String password8 = "blue";
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                    "user=" + uname9 + "&password=" + password8); // Sensitive
+
+            java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
+            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void anotherVulnerability() throws IOException {
         String encoding = Base64.getEncoder().encodeToString(("login:passwd").getBytes("UTF-8"));
