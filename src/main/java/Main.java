@@ -111,15 +111,15 @@ public class Main {
             e.printStackTrace();
         }
     }
- public void pleaseAddVulnerability55() {
+ public void pleaseAddVulnerability77() {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
                     "user=steve&password=blue"); // Sensitive
-            String uname5 = "steve";
-            String password5 = "blue";
+            String uname7 = "steve";
+            String password7 = "blue";
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname5 + "&password=" + password5); // Sensitive
+                    "user=" + uname7 + "&password=" + password7); // Sensitive
 
             java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
             java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
