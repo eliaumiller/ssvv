@@ -46,15 +46,15 @@ public class Main {
         }
     }
 
-    public void pleaseAddVulnerability1() {
+   public void pleaseAddVulnerability111() {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
                     "user=steve&password=blue"); // Sensitive
-            String uname1 = "steve";
-            String password1 = "blue";
+            String uname11 = "steve";
+            String password11 = "blue";
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname1 + "&password=" + password1); // Sensitive
+                    "user=" + uname11 + "&password=" + password11); // Sensitive
 
             java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
             java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
@@ -63,73 +63,6 @@ public class Main {
         }
     }
 
-    public void pleaseAddVulnerability2() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=steve&password=blue"); // Sensitive
-            String uname2 = "steve";
-            String password2 = "blue";
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname2 + "&password=" + password2); // Sensitive
-
-            java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
-            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-   public void pleaseAddVulnerability3() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=steve&password=blue"); // Sensitive
-            String uname3 = "steve";
-            String password2 = "blue";
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname3 + "&password=" + password2); // Sensitive
-
-            java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
-            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-  public void pleaseAddVulnerability4() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=steve&password=blue"); // Sensitive
-            String uname4 = "steve";
-            String password2 = "blue";
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname3 + "&password=" + password2); // Sensitive
-
-            java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
-            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
- public void pleaseAddVulnerability5() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=steve&password=blue"); // Sensitive
-            String uname5 = "steve";
-            String password5 = "blue";
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname5 + "&password=" + password5); // Sensitive
-
-            java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
-            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void anotherVulnerability() throws IOException {
         String encoding = Base64.getEncoder().encodeToString(("login:passwd").getBytes("UTF-8"));
