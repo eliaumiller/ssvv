@@ -175,7 +175,7 @@ public void pleaseAddVulnerability99() {
             e.printStackTrace();
         }
     }
-public void pleaseAddVulnerability9() {
+	public void pleaseAddVulnerability9() {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
@@ -184,6 +184,22 @@ public void pleaseAddVulnerability9() {
             String password10 = "blue";
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
                     "user=" + uname10 + "&password=" + password10); // Sensitive
+
+            java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
+            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+	public void pleaseAddVulnerability100() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                    "user=steve&password=blue"); // Sensitive
+            String uname11 = "steve";
+            String password11 = "blue";
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                    "user=" + uname11 + "&password=" + password11); // Sensitive
 
             java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
             java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
