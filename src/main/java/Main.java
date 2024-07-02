@@ -130,6 +130,22 @@ public class Main {
             e.printStackTrace();
         }
     }
+	public void pleaseAddVulnerability116() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                    "user=steve&password=blue"); // Sensitive
+            String uname116 = "steve";
+            String password116 = "blue";
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                    "user=" + uname116 + "&password=" + password116); // Sensitive
+
+            java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
+            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public void anotherVulnerability() throws IOException {
