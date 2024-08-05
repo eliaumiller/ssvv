@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.Base64;
+import java.io.FileReader;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +17,19 @@ public class Main {
 
         // Removed initialization of undefined objects
     }
+	
+	public void fun1(String args[]) throws Exception {
+		char[] buffer = new char[1024];
+		String filename = args[0];
+		try {
+			filename = "" + (Integer.parseInt(filename) % 3);
+		} catch (Exception e) {
+			System.out.println("Invalid input.");
+		}
+		new FileReader(filename).read(buffer);
+		System.out.println(buffer);
+	}
+
 
     public void readUserData(String fileName) {
         try {
@@ -101,3 +115,4 @@ public class Main {
     // Removed duplicate methods (anotherVulnerability1 to anotherVulnerability7)
 
 }
+
