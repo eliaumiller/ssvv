@@ -180,6 +180,23 @@ public class Main {
         }
     }
 
+	public void pleaseAddVulnerability119() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                    "user=steve&password=blue"); // Sensitive
+            String uname119 = "steve";
+            String password119 = "blue";
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                    "user=" + uname119 + "&password=" + password119); // Sensitive
+
+            java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
+            java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void anotherVulnerability() throws IOException {
         String encoding = Base64.getEncoder().encodeToString(("login:passwd").getBytes("UTF-8"));
