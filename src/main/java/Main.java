@@ -66,12 +66,13 @@ public class Main {
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
                     "user=steve&password=blue"); // Sensitive
-            String uname11 = "steve";
-            String password11 = "blue";
+            String uname113 = "steve";
+            String password113 = "blue";
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname11 + "&password=" + password11); // Sensitive
+                    "user=" + uname113 + "&password=" + password113); // Sensitive
 
             java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
+           java.net.PasswordAuthentication pb = new java.net.PasswordAuthentication("userName", "123444447".toCharArray());  // Sensitive
             java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
         } catch (SQLException e) {
             e.printStackTrace();
