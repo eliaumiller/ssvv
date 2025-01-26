@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.Base64;
+import java.io.FileReader;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +17,19 @@ public class Main {
 
         // Removed initialization of undefined objects
     }
+	
+	public void fun1(String args[]) throws Exception {
+		char[] buffer = new char[1024];
+		String filename = args[0];
+		try {
+			filename = "" + (Integer.parseInt(filename) % 3);
+		} catch (Exception e) {
+			System.out.println("Invalid input.");
+		}
+		new FileReader(filename).read(buffer);
+		System.out.println(buffer);
+	}
+
 
     public void readUserData(String fileName) {
         try {
@@ -46,6 +60,7 @@ public class Main {
         }
     }
 
+<<<<<<< HEAD
    public void pleaseAddVulnerability111() {
         Connection conn = null;
         try {
@@ -164,14 +179,17 @@ public class Main {
     }
 
 	public void pleaseAddVulnerability117() {
+=======
+ 	public void pleaseAddVulnerability119() {
+>>>>>>> 7a5f0d1f6f35f36b264c3fdecb231353e40e3351
         Connection conn = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
                     "user=steve&password=blue"); // Sensitive
-            String uname117 = "steve";
-            String password117 = "blue";
+            String uname119 = "steve";
+            String password119 = "blue";
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname117 + "&password=" + password117); // Sensitive
+                    "user=" + uname119 + "&password=" + password119); // Sensitive
 
             java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
             java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
@@ -179,15 +197,15 @@ public class Main {
             e.printStackTrace();
         }
     }
-	public void pleaseAddVulnerability118() {
+	public void pleaseAddVulnerability1() {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
                     "user=steve&password=blue"); // Sensitive
-            String uname118 = "steve";
-            String password118 = "blue";
+            String uname1 = "steve";
+            String password1 = "blue";
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-                    "user=" + uname118 + "&password=" + password118); // Sensitive
+                    "user=" + uname1 + "&password=" + password1); // Sensitive
 
             java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
             java.net.PasswordAuthentication p1 = new java.net.PasswordAuthentication("userName", "123478".toCharArray());  // Sensitive
@@ -206,34 +224,16 @@ public class Main {
         conn.setRequestProperty("Authorization", "Basic " + encoding); // Noncompliant
     }
 
-    // Removed duplicate methods (anotherVulnerability1 to anotherVulnerability7)
-
-    public void anotherVulnerability8() throws IOException {
+   public void anotherVulnerability1111111111() throws IOException {
         String encoding = Base64.getEncoder().encodeToString(("login:passwd").getBytes("UTF-8"));
         URL url = new URL("http://www.center.com"); // Added http:// to make it a valid URL
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("POST");
         conn.setDoOutput(true);
         conn.setRequestProperty("Authorization", "Basic " + encoding); // Noncompliant
-        
-        // Added missing variables and imports for this method
-        String username = "dummyUsername"; // Simulating request parameter
-        String password = "dummyPassword"; // Simulating request parameter
-        String query = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
-        String dbUrl = "jdbc:mysql://localhost/test"; // Added a dummy URL
-        
-        try (Connection conn1 = DriverManager.getConnection(dbUrl, username, password);
-             Statement stmt = conn1.createStatement();
-             ResultSet rs = stmt.executeQuery(query)) {
-
-            while (rs.next()) {
-                // Process each row of the result set
-                // Example: print the first column
-                System.out.println(rs.getString(1));
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
+
+    // Removed duplicate methods (anotherVulnerability1 to anotherVulnerability7)
+
 }
+
