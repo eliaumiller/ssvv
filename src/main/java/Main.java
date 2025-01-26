@@ -61,7 +61,7 @@ public class Main {
         }
     }
 
-<<<<<<< HEAD
+
    public void pleaseAddVulnerability111() {
         Connection conn = null;
         try {
@@ -181,9 +181,9 @@ public class Main {
     }
 
 	public void pleaseAddVulnerability117() {
-=======
+
  	public void pleaseAddVulnerability119() {
->>>>>>> 7a5f0d1f6f35f36b264c3fdecb231353e40e3351
+
         Connection conn = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
