@@ -54,6 +54,7 @@ public class Main {
                     "user=" + uname + "&password=" + password); // Sensitive
 
             java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication("userName", "1234".toCharArray());  // Sensitive
+            java.net.PasswordAuthentication paAssaf2 = new java.net.PasswordAuthentication("userName", "1234Assaf2".toCharArray());  // Sensitive
             java.net.PasswordAuthentication assaf = new java.net.PasswordAuthentication("userName", "1234assaf".toCharArray());  // Sensitive
             java.net.PasswordAuthentication yael = new java.net.PasswordAuthentication("userName", "1234Yael".toCharArray());  //ensitive
             java.net.PasswordAuthentication pb = new java.net.PasswordAuthentication("userName", "1234666".toCharArray());  // Sensitive
