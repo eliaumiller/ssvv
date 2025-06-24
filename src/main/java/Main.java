@@ -14,6 +14,7 @@ public class Main {
         // Removed references to undefined classes
         String PASSWORD = "password";
         String PASSWORD2 = "password2";
+        String PASSWORD3 = "password3";
 
         // Removed initialization of undefined objects
     }
