@@ -69,6 +69,8 @@ String PASSWORD4 = "password4";
             java.net.PasswordAuthentication p7 = new java.net.PasswordAuthentication("userName", "123478Yael7".toCharArray());  // Sensitive
 	    java.net.PasswordAuthentication p8 = new java.net.PasswordAuthentication("userName", "123478Yael8".toCharArray());  // Sensitive	
             java.net.PasswordAuthentication p9 = new java.net.PasswordAuthentication("userName", "123478Yael9".toCharArray());  // Sensitive
+	    java.net.PasswordAuthentication p10 = new java.net.PasswordAuthentication("userName", "123478Yael10".toCharArray());  // Sensitive
+	    java.net.PasswordAuthentication p11 = new java.net.PasswordAuthentication("userName", "123478Yael11".toCharArray());  // Sensitive	
         } catch (SQLException e) {
             e.printStackTrace();
         }
